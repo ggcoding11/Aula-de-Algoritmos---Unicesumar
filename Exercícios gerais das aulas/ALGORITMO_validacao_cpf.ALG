@@ -1,20 +1,20 @@
 Algoritmo "semnome"
-// Disciplina   : [Linguagem e Lógica de Programação]
+// Disciplina   : [Linguagem e LÃ³gica de ProgramaÃ§Ã£o]
 // Professor   : Antonio Carlos Nicolodi 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// DescriÃ§Ã£o   : Aqui vocÃª descreve o que o programa faz! (funÃ§Ã£o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 07/09/2024
 Var
-// Seção de Declarações das variáveis 
+// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis 
 cpfReal: caractere
 testeCpf: caractere
 cpfTestado: caractere
 contador: inteiro
 valorMultiplicado: inteiro
 somaDigitosMultiplicados: inteiro
-primeiroDigitoVerificador: inteiro
+digitoVerificador: inteiro
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc... 
 escreva("Digite seu cpf completo: ")
 leia(cpfTestado)
 
@@ -35,12 +35,12 @@ para contador de 1 ate 9 faca
 fimpara
 
 se ((somaDigitosMultiplicados%11) < 2) entao
-   primeiroDigitoVerificador <- 0
+   digitoVerificador <- 0
 senao
-     primeiroDigitoVerificador <- 11 - (somaDigitosMultiplicados%11)
+     digitoVerificador <- 11 - (somaDigitosMultiplicados%11)
 fimse
 
-cpfReal <- copia(cpfReal,1,9) + numpcarac(primeiroDigitoVerificador)
+cpfReal <- copia(cpfReal,1,9) + numpcarac(digitoVerificador)
 
 somaDigitosMultiplicados <- 0
 
@@ -52,16 +52,16 @@ para contador de 1 ate 10 faca
 fimpara
 
 se ((somaDigitosMultiplicados%11) < 2) entao
-   primeiroDigitoVerificador <- 0
+   digitoVerificador <- 0
 senao
-     primeiroDigitoVerificador <- 11 - (somaDigitosMultiplicados%11)
+     digitoVerificador <- 11 - (somaDigitosMultiplicados%11)
 fimse
 
-cpfReal <- copia(cpfReal,1,10) + numpcarac(primeiroDigitoVerificador)
+cpfReal <- copia(cpfReal,1,10) + numpcarac(digitoVerificador)
 
 se (cpfReal = cpfTestado) entao
    escreva("CPF EXISTE!")
 senao
-     escreva("CPF INVÁLIDO")
+     escreva("CPF INVÃLIDO")
 fimse
 Fimalgoritmo
