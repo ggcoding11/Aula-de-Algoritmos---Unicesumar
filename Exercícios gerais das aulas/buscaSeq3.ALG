@@ -6,16 +6,21 @@ Algoritmo "semnome"
 // Data atual  : 26/11/2024
 Var
 // Seção de Declarações das variáveis 
-A: vetor [0..9] de inteiro
+A: vetor [0..9] de caractere
 i, j: inteiro
-temp: inteiro
+nomeProcurado: caractere
+p: inteiro
+temp: caractere
 
 Inicio
 
 para i de 0 ate 9 faca
-     escreva("Digite o numero: ")
+     escreva("Digite o nome: ")
      leia(A[i])
 fimpara
+
+escreva("Nome procurado: ")
+leia(nomeProcurado)
 
 para i de 0 ate 8 faca
      para j de 0 ate (8 - i) faca
@@ -26,5 +31,22 @@ para i de 0 ate 8 faca
           fimse
      fimpara
 fimpara
+
+p <- -1
+i <- -1
+
+repita
+      i <- i + 1
+
+      se (A[i] = nomeProcurado) entao
+         p <- i
+      fimse
+ate (A[i] >= nomeProcurado)
+
+se (p <> -1) entao
+   escreva("Encontrado!")
+senao
+     escreva("Não encontrado!")
+fimse
 
 Fimalgoritmo
